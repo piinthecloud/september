@@ -1,0 +1,29 @@
+<div class="jumbotron text-center">
+	<h1>CatRanking</h1>
+    <div class="row">
+      <div class="col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-body">
+                <h2>Cats</h2>
+                <div ng-repeat="cat in cats track by $index">
+                    <h3>{{cat.id}}</h3>
+                    <h4>Clicks: {{cat.clicks}}</h4>
+                    <div ng-click="getCat(cat)" class="cat-profile-pic">
+                        <img ng-src="{{cat.url}}" on-src-error="https://i.pinimg.com/originals/7c/9f/ff/7c9fff51a5029336549a4e8c79cf1f9a.jpg" />
+                    </div>
+                </div>
+            </div>
+          </div>
+
+      </div>
+      <div class="col-sm-8">
+          <h2>Ms./Mr. Cat</h2>
+          <h3 ng-if="!currentCat">Choose a cat to rate it</h3>
+          <h3 ng-if="currentCat">{{currentCat.id}}</h3>
+          <div ng-if="currentCat" class="cat-pic">
+              <img ng-src="{{currentCat.url}}" on-src-error="https://i.pinimg.com/originals/7c/9f/ff/7c9fff51a5029336549a4e8c79cf1f9a.jpg"/>
+          </div>
+           <div ng-if="currentCat">{{currentCat.clicks}}</div>
+      </div>
+    </div>
+</div>
