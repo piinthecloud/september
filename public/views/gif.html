@@ -1,3 +1,13 @@
 <div class="jumbotron text-center">
-    {{gifs}}
+    <div class="row">
+        <div ng-repeat="gif in gifs" class="col-md-4 col-sm-6">
+            <div class="gif-card">
+                <div class="gif-view-wrapper">
+                    <img src="{{gif.gifurl}}" alt="{{gif.title}}">
+                </div>
+                <p>{{gif.title}}</p>
+                <button class="btn btn-default pull-right" type="button" name="gif-button">View</button>
+            </div>
+        </div>
+    </row>
 </div>

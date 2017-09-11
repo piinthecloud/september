@@ -1,10 +1,12 @@
-angular
-  .module('app')
-  .controller('MainCtrl', MainCtrl);
+(function() {
+    'use strict';
+    angular
+      .module('app')
+      .controller('MainCtrl', MainCtrl);
 
-MainCtrl.$inject = ['$scope'];
+    MainCtrl.$inject = ['$scope'];
 
-function MainCtrl($scope) {
-    var ctrl = this;
-    $scope.tagline = 'To the moon and back!';
-}
+    function MainCtrl($scope) {
+        // Nothing yet
+    }
+})();

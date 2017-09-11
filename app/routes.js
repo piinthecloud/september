@@ -3,6 +3,10 @@ var parser = require('xml2json');
 
 module.exports = function(app) {
 
+    app.get('/api/coupons', function(req, res) {
+        res.sendfile('./data/coupons.json')
+    });
+
     app.get('/api/gifs', function(req, res) {
         res.sendfile('./data/gifs.json')
     });
@@ -17,7 +21,7 @@ module.exports = function(app) {
         })
     });
 
-	app.get('/*', function(req, res) {
-		res.sendfile('./public/index.html');
-	});
+    app.get('/*', function(req, res) {
+        res.sendfile('./public/index.html');
+    });
 };

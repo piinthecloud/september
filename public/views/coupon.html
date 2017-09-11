@@ -1,0 +1,6 @@
+<div class="jumbotron coupon-viz">
+    <div ng-if='coupons'>
+        <d3-bar-chart data="coupons" attribute-x="value" attribute-y="first_seen" ></d3-bar-chart>
+        <d3-bar-chart data="coupons" attribute-x="value" attribute-y="last_seen"></d3-bar-chart>
+    </div>
+</div>

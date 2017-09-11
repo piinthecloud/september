@@ -14,9 +14,13 @@
                     templateUrl: 'views/cat.html',
                     controller: 'CatCtrl'
                 })
-                .when('/gif', {
+                .when('/gifs', {
                     templateUrl: 'views/gif.html',
                     controller: 'GifCtrl'
+                })
+                .when('/coupons', {
+                    templateUrl: 'views/coupon.html',
+                    controller: 'CouponsCtrl'
                 });
 
             $locationProvider.html5Mode(true);
